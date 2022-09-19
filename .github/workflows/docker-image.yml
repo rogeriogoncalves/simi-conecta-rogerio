@@ -1,0 +1,39 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.16.0-alpine]
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build the Docker image
+      run: docker compose up -d
+    
+    - name: Mocha
+      run: npm install mocha
+    
+    - name: NPM Test
+      run: npm test
+      
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        fail_ci_if_error: true
+        flags: unittests
+        name: codecov-umbrella
+        verbose: true
