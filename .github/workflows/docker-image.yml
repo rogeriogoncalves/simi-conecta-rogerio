@@ -13,6 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    environment: release
     strategy:
       matrix:
         node-version: [16.16.0-alpine]
