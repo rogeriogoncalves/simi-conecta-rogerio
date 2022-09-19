@@ -1,0 +1,16 @@
+# build environment
+FROM node:16.16.0-alpine AS build
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+ARG REACT_APP_IP_ADDR
+COPY package*.json ./
+RUN npm ci --silent
+COPY . ./
+RUN npm run build
+
+# production environment
+FROM node:16.16.0-alpine AS prod
+COPY --from=build /app/build /var/www/html/simi-conecta/build
+RUN npm install serve -g --silent
+EXPOSE 3000
+CMD ["serve", "-s", "/var/www/html/simi-conecta/build"]

@@ -1,0 +1,74 @@
+.Container {
+  display: flex;
+  position: static;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 130px;
+  max-width: 450px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Container h1 {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.ArrowBack {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 30px;
+}
+
+.FormContainer {
+  display: block;
+  margin-top: 15px;
+  width: 80%;
+}
+
+.ItemLabelContainer label {
+  width: 100%;
+  justify-content: center;
+}
+
+.FormItemLabel {
+  font-size: 16px;
+}
+
+.Button {
+  margin-top: 20px;
+}
+
+.ButtonPrimary {
+  background-color: #e68d8e;
+  border-color: #e68d8e;
+}
+
+.ButtonDefault {
+  background-color: #ff8c007a;
+  border-color: #ff8c007a;
+}
+
+.Pagination {
+  position: absolute;
+  bottom: 80px;
+}
+
+.PaginationFirefox {
+  position: absolute;
+  bottom: 20px;
+}
+
+@media only screen and (max-height: 550px) {
+  .Pagination {
+    position: initial;
+    bottom: initial;
+  }
+
+  .PaginationFirefox {
+    position: initial;
+    bottom: initial;
+  }
+}

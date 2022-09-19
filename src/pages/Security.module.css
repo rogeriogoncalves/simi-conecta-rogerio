@@ -1,0 +1,41 @@
+.Container {
+  display: flex;
+  position: static;
+  margin: 0 auto;
+  padding-top: 50px;
+  max-width: 450px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Container h1 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+
+.Container h2 {
+  font-size: 20px;
+  margin: 0px;
+}
+
+.MenuContainer {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 30px;
+}
+
+.InteractionContainer {
+  display: block;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.Card {
+  border-top: 1.5px solid grey;
+  border-bottom: 1.5px solid grey;
+  cursor: pointer;
+  font-size: 17px;
+}

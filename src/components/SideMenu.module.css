@@ -1,0 +1,14 @@
+.MenuButton {
+  margin-bottom: 16px;
+}
+
+.MenuPopover {
+  width: min-content;
+  float: left;
+}
+
+.HideItem {
+  display: none;
+  position: absolute;
+  left: -999em;
+}

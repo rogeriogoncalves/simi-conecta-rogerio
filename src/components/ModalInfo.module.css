@@ -1,0 +1,9 @@
+.HelpPopup {
+  max-height: 444px;
+  overflow: auto;
+}
+
+.HelpContainer {
+  width: 90%;
+  text-align: justify;
+}

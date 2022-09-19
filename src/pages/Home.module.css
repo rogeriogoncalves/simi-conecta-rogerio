@@ -1,0 +1,51 @@
+.Container {
+  display: flex;
+  position: static;
+  margin: 0 auto;
+  padding-top: 50px;
+  max-width: 450px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Container h1 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.Container p {
+  font-size: 16px;
+  text-align: center;
+}
+
+.MenuContainer {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 30px;
+}
+
+.InteractionContainer {
+  display: block;
+  margin-top: 15px;
+  width: 80%;
+}
+
+.Search {
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.87) !important;
+  margin-bottom: 35px;
+}
+
+.Innovation {
+  text-align: justify;
+  max-width: 306px;
+  height: min-content;
+  margin: auto;
+  padding: 5px;
+  position: absolute;
+  bottom: 20px;
+}

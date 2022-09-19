@@ -1,0 +1,95 @@
+.Container {
+  display: flex;
+  position: static;
+  margin: 0 auto;
+  padding-top: 50px;
+  max-width: 450px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Container h1 {
+  font-weight: 700;
+  font-size: 30px;
+  box-sizing: border-box;
+  margin: 0px 0px 12px 0px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ArrowBack {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  font-size: 30px;
+}
+
+.InteractionContainer {
+  display: block;
+  margin-top: 15px;
+  width: 80%;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.Description {
+  font-size: 16px;
+  text-align: justify;
+  margin-bottom: 20px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.14);
+  border-style: solid;
+  padding: 13px;
+  height: 217px;
+  overflow: auto;
+}
+
+.ContactContainer {
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.14);
+  border-style: solid;
+  padding: 10px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+.ContactList {
+  list-style: none;
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: space-between;
+  height: 140px;
+  margin: 0px;
+  padding-left: 10px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.ContactList li {
+  display: inherit;
+  flex-direction: inherit;
+  width: max-content;
+  padding-right: 20px;
+}
+
+.ContactList li a {
+  width: inherit;
+}
+
+.OrgImgContainer {
+  margin: 30px auto;
+}
+
+.OrgImgContainer img {
+  width: auto;
+  max-width: 306px;
+  height: 100px;
+}

@@ -1,0 +1,114 @@
+.Container {
+  display: block;
+  position: static;
+  padding-top: 30px;
+  width: 85%;
+  max-width: 500px;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.Container h1,
+.OrgName {
+  font-weight: 700;
+  font-size: 30px;
+  box-sizing: border-box;
+  margin: 0px 0px 12px 0px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.MenuContainer {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 30px;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+  margin: 25px auto 12px 40px;
+}
+
+.EditIcon {
+  font-size: 22px;
+  margin-right: 0px !important;
+  display: 'inline-block';
+  vertical-align: 'top';
+  color: 'black';
+  height: 'fit-content';
+}
+
+.DescriptionContainer {
+  margin-top: 20px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.14);
+  border-style: solid;
+  padding: 13px;
+  max-height: 225px;
+  overflow: auto;
+}
+
+.DescriptionText {
+  font-size: 18px;
+  text-align: justify;
+  margin: 0px;
+}
+
+.EditContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 10px 0px 5px auto;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.EditContainer span {
+  margin-right: 7px;
+}
+
+.ContactContainer {
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.14);
+  border-style: solid;
+  padding: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.ContactList {
+  list-style: none;
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: space-between;
+  height: 140px;
+  margin: 0px;
+  padding-left: 10px;
+  text-align: justify;
+  font-size: 16px;
+  overflow: auto;
+}
+
+.ContactList li {
+  display: inherit;
+  flex-direction: inherit;
+  width: 100%;
+}
+
+.ContactList li div {
+  width: inherit;
+}
+
+.SubmitBtn {
+  display: inline-flex;
+  flex-direction: row;
+  align-content: center;
+  margin-top: 10px;
+}

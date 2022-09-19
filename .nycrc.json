@@ -1,0 +1,21 @@
+{
+    "reporter": [
+        "text",
+        "json",
+        "html"
+    ],
+
+    "all": true,
+
+    "include": [
+        "src/**/pages/*.js",
+        "src/**/test"
+    ],
+
+    "report-dir": ".nyc_output/",
+
+    "exclude": [
+        "src/**/pages/*.AntdStyle.js",
+        "src/**/pages/*.AntdStyles.js"
+    ]
+    }

@@ -1,0 +1,82 @@
+.Container {
+  display: flex;
+  position: static;
+  margin: 0 auto;
+  padding-top: 50px;
+  max-width: 450px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Container h1 {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.ArrowBack {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  font-size: 30px;
+}
+
+.FormContainer {
+  display: block;
+  margin-top: 15px;
+  width: 80%;
+}
+
+.FormItem > div {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  white-space: normal;
+}
+
+@media only screen and (max-width: 450px) {
+  .FormItem > div {
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.FormItem label {
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  height: auto;
+}
+
+.OptionItem {
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: RotisSansSerif;
+  overflow-x: auto;
+}
+
+.Help {
+  font-size: 17px;
+  display: block;
+  width: fit-content;
+  margin: 10px 0px 5px auto;
+}
+
+.Pagination {
+  position: absolute;
+  bottom: 80px;
+}
+
+.PaginationFirefox {
+  position: absolute;
+  bottom: 20px;
+}
+
+@media only screen and (max-height: 600px) {
+  .Container {
+    padding-bottom: 175px;
+  }
+}

@@ -1,0 +1,35 @@
+.Container {
+  display: block;
+  position: static;
+  padding-top: 30px;
+  width: 100%;
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Container h2 {
+  font-size: 18px;
+  margin: 0px;
+  width: fit-content;
+}
+
+.Container p {
+  font-size: 16px;
+  text-align: justify;
+  margin: 0px;
+  padding: 0px 16px;
+}
+
+.MenuContainer {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 30px;
+}
+
+.InteractionContainer {
+  display: block;
+  margin-top: 15px;
+}

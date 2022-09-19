@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  simi-conecta:
+    image: simi-conecta:prod
+    build:
+      context: ./
+      dockerfile: Dockerfile.prod
+      args:
+        - REACT_APP_IP_ADDR=${IP_ADDR}
+    networks:
+      - simicn
+    ports:
+      - 80:3000
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+      - mongoproxy
+
+  mongoproxy:
+    image: mongoproxy:1.0
+    build:
+      context: ./
+      dockerfile: ./src/proxy/Dockerfile
+    networks:
+      - simicn
+    ports:
+      - 3001:3001
+    environment:
+      - MONGO_URI=mongodb://simiAdmin:51m1%40C0n3c74@mongodb:27017/admin
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:3.2.21
+    volumes:
+      - "simicn-data:/data/db"
+    networks:
+      - simicn
+    # ports:
+    #   - 27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: simiAdmin
+      MONGO_INITDB_ROOT_PASSWORD: 51m1@C0n3c74
+
+networks:
+  simicn:
+    driver: bridge
+
+volumes:
+  simicn-data:

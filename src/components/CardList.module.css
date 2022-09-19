@@ -1,0 +1,62 @@
+.CardListContainer {
+  min-height: 225px;
+  max-height: calc(100vh - 412px);
+  overflow: auto;
+  padding: 0px 8px;
+}
+
+.Card {
+  margin: auto;
+  width: auto;
+  max-width: 350px;
+  height: 110px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 4px 4px lightgray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.Meta {
+  margin: 0;
+  text-align: left;
+  font-size: small;
+  width: 89%;
+  height: 72.685px;
+  hyphens: auto;
+  float: left;
+}
+
+.Description {
+  width: 100%;
+  margin-right: 15px;
+  max-height: 50px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: auto;
+}
+
+.Description::-webkit-scrollbar {
+  display: none;
+}
+
+.IconsContainer {
+  font-size: 18px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.Icon {
+  color: black;
+}
+
+.Skeleton {
+  width: 350px;
+  margin: auto;
+}
+
+.LoadingText {
+  font-size: 14pt;
+}
