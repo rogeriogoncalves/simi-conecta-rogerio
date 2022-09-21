@@ -25,6 +25,6 @@ jobs:
     
     - name: Mocha
       run: npm install mocha
-    
+    erro
     - name: NPM Test
       run: npm test
