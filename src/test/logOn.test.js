@@ -21,7 +21,7 @@ describe('LogOn', function() {
   this.timeout(30000)
   let driver
   let vars
-s
+
   beforeEach(async function() {
     driver = await new Builder().forBrowser('chrome')
     .setChromeOptions(opts)
