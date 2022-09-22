@@ -22,6 +22,8 @@ describe('LogOn', function() {
   let driver
   let vars
 
+  s
+
   beforeEach(async function() {
     driver = await new Builder().forBrowser('chrome')
     .setChromeOptions(opts)
