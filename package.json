@@ -40,7 +40,8 @@
   "scripts": {
     "start": "set PORT=80 & react-app-rewired start",
     "build": "react-app-rewired build --analyze",
-    "test": "nyc mocha 'src/**/*.test.js'",
+    "test": "mocha 'src/**/*.test.js'",
+    "coverage": "nyc mocha 'src/**/*.test.js'",
     "eject": "react-scripts eject"
   },
   "browserslist": {
