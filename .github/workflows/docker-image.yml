@@ -27,5 +27,5 @@ jobs:
     - name: Mocha
       run: npm install mocha
 
-    - name: NPM Test
+    - name: NPM-Test
       run: npm test
