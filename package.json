@@ -11,7 +11,7 @@
     "antd": "^4.10.3",
     "axios": "^0.21.4",
     "bcrypt": "^5.0.1",
-    "chromedriver": "^104.0.0",
+    "chromedriver": "^106.0.1",
     "config": "^3.3.6",
     "cors": "^2.8.5",
     "customize-cra": "^1.0.0",
