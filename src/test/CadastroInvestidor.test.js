@@ -38,7 +38,8 @@ describe('CadastroInvestidor', function() {
 
     //Tela Vamos Começar    
     await driver.findElement(By.id("email")).click()
-    await driver.findElement(By.id("email")).sendKeys("email" + Math.floor(Math.random() * 1000) + "@email.com")
+    //await driver.findElement(By.id("email")).sendKeys("email" + Math.floor(Math.random() * 1000) + "@email.com")
+    await driver.findElement(By.id("email")).sendKeys("investidor@email.com")
     await driver.findElement(By.id("password")).click()
     await driver.findElement(By.id("password")).sendKeys("123456")
     await driver.findElement(By.id("confirmPassword")).click()
