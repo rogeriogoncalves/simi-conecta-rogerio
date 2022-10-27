@@ -8,10 +8,10 @@ let opts = new chrome.Options();
 
 opts.addArguments("--window-size=1936,1056");
 opts.addArguments("--allow-insecure-localhost");
-//opts.addArguments("--headless");
-//opts.addArguments("--disable-gpu");
-//opts.addArguments("--disable-webgl");
-//opts.addArguments("--no-sandbox");
+opts.addArguments("--headless");
+opts.addArguments("--disable-gpu");
+opts.addArguments("--disable-webgl");
+opts.addArguments("--no-sandbox");
 //opts.addArguments("--ignore-gpu-blocklist");
 
 const assert = require('assert')
