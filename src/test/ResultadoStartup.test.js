@@ -1,4 +1,5 @@
 const { Builder, By, Key, until } = require('selenium-webdriver')
+const delay = ms => new Promise(res => setTimeout(res, ms))
 const chrome = require('selenium-webdriver/chrome')
 
 
@@ -11,13 +12,14 @@ opts.addArguments("--headless");
 opts.addArguments("--disable-gpu");
 opts.addArguments("--disable-webgl");
 opts.addArguments("--no-sandbox");
+opts.addArguments("--ignore-gpu-blocklist");
 
 const assert = require('assert')
 const { wait } = require('@testing-library/dom')
 const { waitFor } = require('@testing-library/dom')
 
 
-describe('LogOn', function() {
+describe('ResultadoStartup', function() {
   this.timeout(30000)
   let driver
   let vars
@@ -28,19 +30,27 @@ describe('LogOn', function() {
     .build()
     vars = {}
   })
-  //afterEach(async function() {
-    //await driver.quit();
-  //})
+  afterEach(async function() {
+    await driver.quit();
+  })
 
-  it('LogOn', async function() {
-    //await driver.get("http://google.com.br")
-    await driver.get("http://localhost")
+  it('ResultadoStartup', async function() {
+    await driver.get("http://localhost/")
+    await driver.manage().window().setRect({ width: 1936, height: 1056 })
+
     await driver.manage().window().setRect(1936, 1056)
     await driver.findElement(By.name("email")).click()
-    //await driver.findElement(By.name("email")).sendKeys("email" + Math.floor(Math.random() * 1000) + "@email.com")
-    await driver.findElement(By.name("email")).sendKeys("investidor@email.com")
+    await driver.findElement(By.name("email")).sendKeys("startup@email.com")
+    await driver.findElement(By.name("password")).click()
     await driver.findElement(By.name("password")).sendKeys("123456")
     await driver.findElement(By.name("entrar")).click()
+    await delay(2000)
+    vars["windowHandles"] = await driver.getAllWindowHandles()
+    await delay(700)
+    await driver.executeScript("window.scrollTo(0,0)")
+    await driver.executeScript("window.scrollTo(0,0)")
+    await driver.executeScript("window.scrollTo(0,0)")
     await driver.close()
+    
   })
 })
